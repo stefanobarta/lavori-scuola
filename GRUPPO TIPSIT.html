@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+  <link rel="stylesheet" href="style.css">
+<style>
+#myProgress, #myProgress1 {
+  width: 100%;
+  height: 30px;
+  position: relative;
+  background-color:white;
+}
+
+
+#myBar, #myBar1 {
+  background-color:black;
+  
+  width: 10px;
+  height: 30px;
+  position: absolute;
+
+
+}
+#immagine { 
+    background-color:burlywood;
+    align-items: center;
+   }
+h1{
+  text-align: center;
+}
+
+</style>
+<body id="immagine">
+
+<h1>CONSUMO DROGA IN ITALIA</h1>
+
+<p>*ogni secondo del contatore equivale a circa 4 gg*</p>
+<div><p>questi sono i soldi spesi dagli italiani ogni anno circa <p id="cont">0</p></p></div>
+<div id="myProgress">
+  <div id="myBar"></div>
+
+
+</div>
+  
+<br>
+<div>La cocaina continua a farla da padrone nel mercato della droga italiano: nel 2019 infatti sono stati sequestrati quasi 8,3 tonnellate della sostanza, tre volte in più rispetto all’anno precedente. Causa ed effetto di questa espansione è l’aumento continuativo della domanda: il 31% dei quasi 16 miliardi di euro spesi per l’acquisto di sostanze stupefacenti è correlato proprio alla cocaina. Le sostanze stupefacenti più diffuse sul mercato illegale restano la cannabis e i suoi derivati, seppur in flessione rispetto all’anno precedente; stabili i consumi fra i giovanissimi.</div>
+<br><br><br><br>
+<div><p>questi sono i kg confiscati dagli italiani ogni anno circa <p id="cont1">0</p></p></div>
+<div id="myProgress1">
+    <div id="myBar1"></div>
+  </div><br>
+   <div>Aumentano, fino ad arrivare ai livelli del decennio scorso, le morti per overdose: nel 2019 sono stati registrati 373 casi (+11%), più di un’overdose al giorno. L’eroina continua a rappresentare la causa principale dei decessi (45,3%), anche se quelli attribuibili all’uso di cocaina sono in costante aumento. “Imprecisate” rimangono invece le sostanze che causano un terzo delle morti, fenomeno che gli studiosi collegano alla diffusione di Nuove Sostanze Psicoattive, la cui composizione però è spesso difficile da determinare.
+
+    Sono stati 7.480 i ricoveri in ospedale direttamente correlati all’uso di stupefacenti, soprattutto di giovani e under 45, soprattutto a causa della cocaina. Ma anche la cannabis ha, nell’aumento delle degenze per uso di sostanze, un ruolo fondamentale. Preoccupante è anche l’aumento delle diagnosi tardive di HIV: nel 30% dei casi si raggiunge infatti lo stadio di AIDS conclamato, senza essere a conoscenza della propria sieropositività. Solo 15 anni fa questa percentuale era del 15% circa.</div> 
+   <br><br> 
+
+   <img id="immagine" src="https://media-assets.wired.it/photos/615f056bb16785978efa6e2b/master/w_1600,c_limit/1452170240_cannabis.jpg">
+<br><br>
+
+   <a href="https://style.corriere.it/news/societa/consumo-droga-italia-2020/"><span style="font: size 30px;">clicca qui per andare sul sito dove sono stati presi i dati</span></a>
+</body>
+
+<script>
+var c=0;
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 1000);
+  function frame() {
+
+
+document.getElementById("cont").innerHTML=c;
+  c=c+161506849;
+  document.getElementById("cont"); 
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+
+var c1=0;
+function move1() {
+  var elem = document.getElementById("myBar1");   
+  var width = 0;
+  var id = setInterval(frame1, 1000);
+  function frame1() {
+
+
+document.getElementById("cont1").innerHTML=c1;
+  c1=c1+83;
+  document.getElementById("cont1"); 
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+window.onload=move();
+window.onload=move1();
+</script>
+
+
+</body>
+</html>
+
